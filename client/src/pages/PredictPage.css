@@ -1,0 +1,199 @@
+.predict-page {
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+}
+
+.predict-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.predict-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.predict-header p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.predict-form {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: 3rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.form-section {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px dashed var(--border-color);
+}
+
+.form-section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.form-section h2 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.form-group input[type="number"],
+.form-group input[type="text"],
+.form-group select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: all var(--transition-fast);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+/* Tooltip/Helper styling */
+.helper-icon {
+  color: var(--text-muted);
+  cursor: help;
+  transition: color var(--transition-fast);
+}
+
+.helper-icon:hover {
+  color: var(--primary);
+}
+
+/* Checkbox & Radio Groups as Buttons */
+.checkbox-group,
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.checkbox-item,
+.radio-item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  user-select: none;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.checkbox-item:hover,
+.radio-item:hover {
+  border-color: var(--primary);
+  background-color: rgba(79, 70, 229, 0.05);
+}
+
+.checkbox-item input[type="checkbox"],
+.radio-item input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Active State for custom toggles */
+.checkbox-item input:checked ~ span,
+.radio-item input:checked ~ span {
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.checkbox-item:has(input:checked),
+.radio-item:has(input:checked) {
+  border-color: var(--primary);
+  background-color: rgba(79, 70, 229, 0.1);
+  box-shadow: 0 2px 8px rgba(79, 70, 229, 0.15);
+}
+
+/* Range input styling */
+.form-group input[type="range"] {
+  width: 100%;
+  margin-top: 0.5rem;
+  accent-color: var(--primary);
+}
+
+.range-value {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+/* Form Actions */
+.form-actions {
+  margin-top: 3rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.form-actions .btn {
+  min-width: 200px;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .predict-form {
+    padding: 1.5rem;
+  }
+
+  .form-section h2 {
+    font-size: 1.25rem;
+  }
+}

@@ -1,0 +1,158 @@
+.profile-page {
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.profile-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.profile-header p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* Base Card Styling is inherited from main.css */
+.card-header h3 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  color: var(--text-primary);
+}
+
+.info-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Info Items */
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.info-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.info-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.info-value {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-left: 1.5rem;
+}
+
+.info-subtext {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-left: 1.5rem;
+  font-style: italic;
+}
+
+/* Form Styling overrides */
+.profile-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.form-actions .btn {
+  flex: 1;
+}
+
+/* Danger Zone Styling */
+.danger-zone {
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  background: linear-gradient(to bottom right, var(--card-bg), rgba(254, 226, 226, 0.5));
+}
+
+.danger-zone .card-header {
+  background: rgba(254, 226, 226, 0.8);
+  border-bottom-color: rgba(239, 68, 68, 0.2);
+}
+
+.danger-zone .card-header h3 {
+  color: var(--danger-text);
+}
+
+.danger-description {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Delete Confirm Alert */
+.delete-confirm {
+  background-color: var(--danger-bg);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  animation: slideInDown 0.3s ease-out;
+}
+
+.confirm-text {
+  color: var(--danger-text);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.danger-warning-text {
+  font-size: 0.9rem;
+  color: var(--danger-text);
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+  }
+}
